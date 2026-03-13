@@ -1,25 +1,24 @@
 /* GENEL AYARLAR */
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #1a1a1a; /* Koyu Siyah/Gri Arka Plan */
-    color: #e0e0e0; /* Açık Gri Yazı Rengi */
+    background-color: #1a1a1a;
+    color: #e0e0e0;
     margin: 0;
     padding: 20px;
+    box-sizing: border-box;
 }
 
-/* GRUP SEÇİCİ */
 h1, h2, footer p {
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
 
-/* HEADER - KOMPLE TURUNCU ALAN */
 header {
-    background-color: #ff8c00; /* Canlı Turuncu */
-    color: #000; /* Turuncu üstüne siyah yazı daha okunaklı ve profesyonel durur */
+    background-color: #ff8c00;
+    color: #000;
     padding: 50px 20px;
     text-align: center;
-    border-radius: 15px; /* Yumuşak Köşeler */
+    border-radius: 15px;
     margin-bottom: 20px;
 }
 
@@ -28,9 +27,8 @@ header h1 {
     text-transform: uppercase;
 }
 
-/* NAVİGASYON */
 nav {
-    background-color: #333; /* Koyu Gri */
+    background-color: #333;
     padding: 15px;
     border-radius: 12px;
     margin-bottom: 20px;
@@ -44,29 +42,28 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; /* Hocanın istediği şart */
+    display: inline-block;
     margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #ff8c00; /* Linkler turuncu */
+    color: #ff8c00;
     font-weight: bold;
     transition: 0.4s;
 }
 
 nav ul li a:hover {
     color: #fff;
-    text-shadow: 0 0 5px #ff8c00; /* Parlama efekti */
+    text-shadow: 0 0 5px #ff8c00;
 }
 
-/* İÇERİK ALANI */
 .container {
     width: 100%;
 }
 
 main, aside {
-    display: inline-block; /* Yan yana getirme */
+    display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
     padding: 30px;
@@ -76,20 +73,27 @@ main, aside {
 
 main {
     width: 65%;
-    background-color: #262626; /* Bir tık daha açık siyah */
+    background-color: #262626;
     margin-right: 2%;
-    border: 1px solid #444; /* İnce belirginlik çizgisi */
+    border: 1px solid #444;
 }
 
 aside {
     width: 32%;
-    background-color: #333; /* Yan menü */
-    border: 1px solid #ff8c00; /* Yan menüye turuncu çerçeve */
+    background-color: #333;
+    border: 1px solid #ff8c00;
 }
 
-/* HİYERARŞİK SEÇİCİLER */
+/* About sayfasında container olmadan main tek basina kullanildiginda */
+body > main {
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: block;
+}
+
 main h2 {
-    color: #ff8c00; /* İçerik başlıkları turuncu */
+    color: #ff8c00;
     border-bottom: 2px solid #ff8c00;
     display: inline-block;
     padding-bottom: 5px;
@@ -106,13 +110,130 @@ aside p {
     color: #fff;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background-color: #ff8c00; /* Alt kısım da turuncu */
+    background-color: #ff8c00;
     color: #000;
     font-weight: bold;
     border-radius: 12px;
+}
+
+/* ===== İLETİŞİM FORMU (Lab 3) ===== */
+.contact-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #262626;
+    border: 1px solid #ff8c00;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.contact-container h2 {
+    color: #ff8c00;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.6em;
+    border-bottom: 2px solid #ff8c00;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.contact-container label {
+    display: block;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ff8c00;
+}
+
+.radio-group,
+.checkbox-group {
+    background-color: #1a1a1a;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    font-weight: normal;
+    color: #ccc;
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.radio-group label:last-child,
+.checkbox-group label:last-child {
+    margin-bottom: 0;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.btn-gonder {
+    flex: 1;
+    padding: 14px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-gonder:hover {
+    background-color: #0056b3;
+}
+
+.btn-temizle {
+    flex: 1;
+    padding: 14px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-temizle:hover {
+    background-color: #a71d2a;
 }
