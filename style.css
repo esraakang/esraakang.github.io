@@ -1,8 +1,8 @@
 /* GENEL AYARLAR */
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #1a1a1a; /* Koyu Siyah/Gri Arka Plan */
-    color: #e0e0e0; /* Açık Gri Yazı Rengi */
+    background-color: #1a1a1a;
+    color: #e0e0e0;
     margin: 0;
     padding: 20px;
 }
@@ -13,13 +13,13 @@ h1, h2, footer p {
     letter-spacing: 1px;
 }
 
-/* HEADER - KOMPLE TURUNCU ALAN */
+/* HEADER */
 header {
-    background-color: #ff8c00; /* Canlı Turuncu */
-    color: #000; /* Turuncu üstüne siyah yazı daha okunaklı ve profesyonel durur */
+    background-color: #ff8c00;
+    color: #000;
     padding: 50px 20px;
     text-align: center;
-    border-radius: 15px; /* Yumuşak Köşeler */
+    border-radius: 15px;
     margin-bottom: 20px;
 }
 
@@ -30,7 +30,7 @@ header h1 {
 
 /* NAVİGASYON */
 nav {
-    background-color: #333; /* Koyu Gri */
+    background-color: #333;
     padding: 15px;
     border-radius: 12px;
     margin-bottom: 20px;
@@ -44,20 +44,20 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; /* Hocanın istediği şart */
+    display: inline-block;
     margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #ff8c00; /* Linkler turuncu */
+    color: #ff8c00;
     font-weight: bold;
     transition: 0.4s;
 }
 
 nav ul li a:hover {
     color: #fff;
-    text-shadow: 0 0 5px #ff8c00; /* Parlama efekti */
+    text-shadow: 0 0 5px #ff8c00;
 }
 
 /* İÇERİK ALANI */
@@ -66,7 +66,7 @@ nav ul li a:hover {
 }
 
 main, aside {
-    display: inline-block; /* Yan yana getirme */
+    display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
     padding: 30px;
@@ -74,7 +74,6 @@ main, aside {
     min-height: 350px;
 }
 
-/* İletişim sayfasında main yüksekliği içeriğe göre ayarlansın */
 .contact-page main {
     min-height: unset;
     width: 100%;
@@ -89,20 +88,20 @@ main, aside {
 
 main {
     width: 65%;
-    background-color: #262626; /* Bir tık daha açık siyah */
+    background-color: #262626;
     margin-right: 2%;
-    border: 1px solid #444; /* İnce belirginlik çizgisi */
+    border: 1px solid #444;
 }
 
 aside {
     width: 32%;
     background-color: #333; /* Yan menü */
-    border: 1px solid #ff8c00; /* Yan menüye turuncu çerçeve */
+    border: 1px solid #ff8c00;
 }
 
 /* HİYERARŞİK SEÇİCİLER */
 main h2 {
-    color: #ff8c00; /* İçerik başlıkları turuncu */
+    color: #ff8c00;
     border-bottom: 2px solid #ff8c00;
     display: inline-block;
     padding-bottom: 5px;
@@ -240,13 +239,13 @@ footer {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background-color: #ff8c00; /* Alt kısım da turuncu */
+    background-color: #ff8c00;
     color: #000;
     font-weight: bold;
     border-radius: 12px;
 }
 
-/* ===== Flexbox Lab Sayfasi (PDF Gereksinimleri) ===== */
+/* ===== Flexbox Lab Sayfasi ===== */
 body.flex-lab {
     margin: 0;
     padding: 0;
