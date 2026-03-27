@@ -78,6 +78,13 @@ main, aside {
 .contact-page main {
     min-height: unset;
     width: 100%;
+    margin-right: 0;
+}
+
+.about-page main {
+    min-height: unset;
+    width: 100%;
+    margin-right: 0;
 }
 
 main {
@@ -237,4 +244,185 @@ footer {
     color: #000;
     font-weight: bold;
     border-radius: 12px;
+}
+
+/* ===== Flexbox Lab Sayfasi (PDF Gereksinimleri) ===== */
+body.flex-lab {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+body.flex-lab .wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+body.flex-lab .navbar {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    background-color: #333333;
+    color: #ff8c00;
+}
+
+body.flex-lab .logo {
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+body.flex-lab .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+body.flex-lab .nav-links a {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body.flex-lab .nav-links a:hover {
+    color: #ffffff;
+}
+
+body.flex-lab .hero {
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 16px;
+    padding: 1.6vh 2vw;
+    background-color: #262626;
+    box-sizing: border-box;
+}
+
+body.flex-lab .hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body.flex-lab .hero-text h1 {
+    margin: 0 0 8px;
+    font-size: 1.5rem;
+    color: #ff8c00;
+}
+
+body.flex-lab .hero-text p {
+    margin: 0 0 14px;
+    line-height: 1.4;
+}
+
+body.flex-lab .hero-text button {
+    width: fit-content;
+    border: none;
+    background-color: #ff8c00;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+body.flex-lab .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ff8c00;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: #ff8c00;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+body.flex-lab .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+body.flex-lab .cards {
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 1.2vh 2vw;
+    align-content: flex-start;
+    box-sizing: border-box;
+    background-color: #1f1f1f;
+}
+
+body.flex-lab .card {
+    flex: 1 1 calc(33.33% - 12px);
+    min-width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    border: 1px solid #ff8c00;
+    color: #e0e0e0;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+}
+
+body.flex-lab .grow-recap {
+    height: 20vh;
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    padding: 1.2vh 2vw;
+    box-sizing: border-box;
+    background-color: #262626;
+}
+
+body.flex-lab .grow-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #ff8c00;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+body.flex-lab .grow-1,
+body.flex-lab .grow-3 {
+    flex-grow: 1;
+}
+
+body.flex-lab .grow-2 {
+    flex-grow: 2;
+}
+
+body.flex-lab .page-footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background-color: #ff8c00;
+    color: #000000;
+}
+
+body.flex-lab .page-footer p {
+    margin: 0;
 }
