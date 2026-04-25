@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Etkinlik Kayıt</title>
+
+    <!-- Bootstrap (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/hafta7.css" />
+  </head>
+  <body data-bs-theme="light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Esra Kanğ</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Menüyü aç"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="about.html">Hakkımda</a></li>
+            <li class="nav-item"><a class="nav-link" href="interests.html">İlgi Alanlarım</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+          </ul>
+
+          <div class="d-flex gap-2">
+            <a class="btn btn-outline-secondary" href="index.html">Ana sayfaya dön</a>
+            <button id="themeToggle" class="btn btn-primary" type="button">
+              Tema: Açık
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-7">
+            <h1 class="display-6 fw-bold mb-3">Etkileşimli Etkinlik Kayıt</h1>
+            <p class="lead text-secondary mb-4">
+              Bootstrap ile düzenli bir arayüz, JavaScript ile tema değiştirme ve başvuru özeti üretme.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-primary btn-lg" href="#formSection">Hemen başvur</a>
+              <a class="btn btn-outline-secondary btn-lg" href="#cardsSection">Detayları gör</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="card shadow-sm border-0 rounded-4">
+              <div class="card-body">
+                <div class="d-flex align-items-start justify-content-between gap-3">
+                  <div>
+                    <div class="text-uppercase small text-secondary">Kontenjan</div>
+                    <div class="h3 mb-0 fw-bold" id="quotaText">25</div>
+                  </div>
+                  <div class="text-end">
+                    <div class="text-uppercase small text-secondary">Konum</div>
+                    <div class="fw-semibold">Online</div>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div class="d-flex gap-2">
+                  <span class="badge text-bg-primary">Bootstrap 5</span>
+                  <span class="badge text-bg-secondary">JavaScript</span>
+                  <span class="badge text-bg-light border">Responsive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-5">
+      <section id="cardsSection" class="container">
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+          <div>
+            <h2 class="h3 fw-bold mb-1">Etkinlik hakkında</h2>
+            <p class="text-secondary mb-0">En az 3 kart, grid ile responsive yerleşim.</p>
+          </div>
+          <button id="shuffleTips" class="btn btn-outline-secondary" type="button">
+            İpuçlarını değiştir
+          </button>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm rounded-4">
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Program</h3>
+                <p class="text-secondary mb-0" data-tip>
+                  Kısa tanıtım, Bootstrap bileşenleri ve küçük DOM etkileşimleri.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm rounded-4">
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Kazanımlar</h3>
+                <p class="text-secondary mb-0" data-tip>
+                  Form doğrulama, sonuç alanına özet üretme, tema toggle.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm rounded-4">
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Katılım</h3>
+                <p class="text-secondary mb-0" data-tip>
+                  Başvurunu gönder, sayfa yenilenmeden anında özetini gör.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="formSection" class="container mt-5">
+        <div class="row g-4">
+          <div class="col-12 col-lg-7">
+            <div class="card shadow-sm rounded-4">
+              <div class="card-body p-4">
+                <h2 class="h4 fw-bold mb-3">Başvuru Formu</h2>
+
+                <div id="alertArea" class="mb-3" aria-live="polite"></div>
+
+                <form id="applyForm" novalidate>
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <label class="form-label" for="fullName">Ad Soyad</label>
+                      <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Ad Soyad" />
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label" for="email">E-posta</label>
+                      <input class="form-control" id="email" name="email" type="email" placeholder="ornek@mail.com" />
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label" for="track">Katılım Türü</label>
+                      <select class="form-select" id="track" name="track">
+                        <option value="">Seçiniz</option>
+                        <option value="Katılımcı">Katılımcı</option>
+                        <option value="Gönüllü">Gönüllü</option>
+                        <option value="Konuşmacı">Konuşmacı</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label" for="timeSlot">Saat</label>
+                      <select class="form-select" id="timeSlot" name="timeSlot">
+                        <option value="">Seçiniz</option>
+                        <option value="10:00">10:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="16:00">16:00</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="note">Not</label>
+                      <textarea
+                        class="form-control"
+                        id="note"
+                        name="note"
+                        rows="3"
+                        placeholder="Kısaca not bırakabilirsin (opsiyonel)"
+                      ></textarea>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="agree" name="agree" />
+                        <label class="form-check-label" for="agree">
+                          KVKK bilgilendirmesini okudum ve kabul ediyorum
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-wrap gap-2 mt-4">
+                    <button class="btn btn-primary" type="submit">Başvuruyu Gönder</button>
+                    <button class="btn btn-outline-secondary" type="reset">Temizle</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <div class="card shadow-sm rounded-4 h-100">
+              <div class="card-body p-4">
+                <h2 class="h4 fw-bold mb-3">Sonuç Alanı</h2>
+                <div id="resultArea" class="text-secondary">
+                  Formu doldurup gönderdiğinde burada başvuru özetin görünecek.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 border-top bg-body-tertiary">
+      <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <div class="text-secondary small">© 2026 Esra Kanğ</div>
+        <div class="text-secondary small">Bootstrap + JavaScript ile etkileşim</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/hafta7.js"></script>
+  </body>
+</html>

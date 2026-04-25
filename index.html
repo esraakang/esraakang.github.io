@@ -2,49 +2,57 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Esra Kanğ - Portfolyo</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="flex-lab">
-    <div class="wrapper">
-        <nav class="navbar">
-            <div class="logo">Esra Kanğ</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
+<body class="site">
+    <div class="site-shell">
+        <nav class="site-nav" aria-label="Ana menü">
+            <a class="site-logo" href="index.html">Esra Kanğ</a>
+            <ul class="site-links">
+                <li><a href="index.html" aria-current="page">Ana Sayfa</a></li>
                 <li><a href="about.html">Hakkımda</a></li>
                 <li><a href="interests.html">İlgi Alanlarım</a></li>
                 <li><a href="contact.html">İletişim</a></li>
+                <li><a href="hafta7.html">Etkinlik Kayıt</a></li>
             </ul>
         </nav>
 
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Esra Kanğ - Portfolyo</h1>
-                <p>Bilgisayar Mühendisliği öğrencisi olarak web teknolojileri ve modern arayüz geliştirme konularında kendimi sürekli geliştiriyorum.</p>
-                <button type="button">Projelerimi İncele</button>
-            </div>
-            <div class="hero-image" aria-label="Profil alani">
-                <img src="images/profil.png" alt="Esra Kanğ profil fotografı">
-            </div>
-        </section>
+        <header class="site-hero">
+            <h1>Portfolyo</h1>
+            <p>Web teknolojileri ve modern arayüz geliştirme konularında kendimi geliştiriyorum.</p>
+            <p class="hero-cta">
+                <a class="cta-button" href="hafta7.html">Hafta 7 Uygulamasına Git</a>
+            </p>
+        </header>
 
-        <section class="cards">
-            <article class="card">Marmara Üniversitesi<br>Bilgisayar Mühendisliği</article>
-            <article class="card">İlgi Alanı:<br>Web Geliştirme</article>
-            <article class="card">Ögrenilen:<br>HTML5 & CSS3</article>
-            <article class="card">Hedef:<br>Responsive Tasarım</article>
-            <article class="card">Çalışılan:<br>JavaScript Temelleri</article>
-            <article class="card">Sonraki Adım:<br>ASP.NET Core</article>
-        </section>
+        <main class="site-main two-col two-col--wide-sidebar">
+            <section class="site-card">
+                <h2>Kısa özet</h2>
+                <p>Marmara Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Hedefim modern, responsive ve kullanıcı deneyimi odaklı web uygulamaları geliştirmek.</p>
+                <h3>Odak</h3>
+                <ul>
+                    <li>HTML &amp; CSS</li>
+                    <li>JavaScript</li>
+                    <li>Responsive tasarım</li>
+                </ul>
+            </section>
 
-        <section class="grow-recap">
-            <div class="grow-box grow-1">1</div>
-            <div class="grow-box grow-2">2</div>
-            <div class="grow-box grow-3">1</div>
-        </section>
+            <aside class="site-card site-card--sidebar">
+                <h2>Hızlı bağlantılar</h2>
+                <ul>
+                    <li><a href="about.html">Hakkımda</a></li>
+                    <li><a href="interests.html">İlgi Alanlarım</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                </ul>
+                <h3>Güncel çalışma</h3>
+                <p>Bootstrap + JavaScript ile etkileşimli etkinlik kayıt sayfası.</p>
+            </aside>
+        </main>
 
-        <footer class="page-footer">
-            <p>© 2026 Esra Kanğ | Bilgisayar Mühendisliği Portfolyo Alıştırması</p>
+        <footer class="site-footer">
+            <p>© 2026 Esra Kanğ</p>
         </footer>
     </div>
 </body>

@@ -2,57 +2,61 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>İlgi Alanlarım</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="site">
+  <div class="site-shell">
+    <nav class="site-nav" aria-label="Ana menü">
+      <a class="site-logo" href="index.html">Esra Kanğ</a>
+      <ul class="site-links">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkımda</a></li>
+        <li><a href="interests.html" aria-current="page">İlgi Alanlarım</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+        <li><a href="hafta7.html">Etkinlik Kayıt</a></li>
+      </ul>
+    </nav>
 
-  <header>
-    <h1>İlgi Alanlarım</h1>
-    <p>Teknoloji ve kişisel ilgi alanlarım</p>
-  </header>
+    <header class="site-hero">
+      <h1>İlgi Alanlarım</h1>
+      <p>Teknoloji ve öğrenme yolculuğum.</p>
+    </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="about.html">Hakkımda</a></li>
-      <li><a href="interests.html">İlgi Alanlarım</a></li>
-      <li><a href="contact.html">İletişim</a></li>
-    </ul>
-  </nav>
+    <main class="site-main">
+      <section class="site-card">
+        <h2>Teknoloji Alanındaki İlgi Alanlarım</h2>
+        <ul>
+          <li>Web geliştirme</li>
+          <li>Yapay zekâ uygulamaları</li>
+        </ul>
 
-  <main>
+        <h2>Öğrenmek İstediğim Teknolojiler</h2>
+        <ol>
+          <li>HTML ve CSS</li>
+          <li>JavaScript</li>
+          <li>ASP.NET Core</li>
+        </ol>
 
-    <h2>Teknoloji Alanındaki İlgi Alanlarım</h2>
-    <ul>
-      <li>Web geliştirme</li>
-      <li>Yapay zekâ uygulamaları</li>
-    </ul>
+        <h2>Web Teknolojileri Sözlüğü</h2>
+        <dl>
+          <dt>HTML</dt>
+          <dd>Web sayfalarının yapısını oluşturan işaretleme dilidir.</dd>
 
-    <h2>Öğrenmek İstediğim Teknolojiler</h2>
-    <ol>
-      <li>HTML ve CSS</li>
-      <li>JavaScript</li>
-      <li>ASP.NET Core</li>
-    </ol>
+          <dt>CSS</dt>
+          <dd>Web sayfalarının görsel tasarımını düzenlemek için kullanılır.</dd>
 
-    <h2>Web Teknolojileri Sözlüğü</h2>
-    <dl>
-      <dt>HTML</dt>
-      <dd>Web sayfalarının yapısını oluşturan işaretleme dilidir.</dd>
+          <dt>JavaScript</dt>
+          <dd>Web sayfalarına etkileşim kazandıran programlama dilidir.</dd>
+        </dl>
+      </section>
+    </main>
 
-      <dt>CSS</dt>
-      <dd>Web sayfalarının görsel tasarımını düzenlemek için kullanılır.</dd>
-
-      <dt>JavaScript</dt>
-      <dd>Web sayfalarına etkileşim kazandıran programlama dilidir.</dd>
-    </dl>
-
-  </main>
-
-  <footer>
-    <p>© 2026 Esra Kanğ</p>
-  </footer>
-
+    <footer class="site-footer">
+      <p>© 2026 Esra Kanğ</p>
+    </footer>
+  </div>
 </body>
 </html>

@@ -1,8 +1,10 @@
 /* GENEL AYARLAR */
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    background: radial-gradient(1200px 600px at 10% 0%, #ffe4f2 0%, rgba(255, 228, 242, 0) 55%),
+        radial-gradient(1200px 600px at 90% 10%, #e9d5ff 0%, rgba(233, 213, 255, 0) 55%),
+        #fbf7ff;
+    color: #1f2937;
     margin: 0;
     padding: 20px;
 }
@@ -15,12 +17,13 @@ h1, h2, footer p {
 
 /* HEADER */
 header {
-    background-color: #ff8c00;
-    color: #000;
+    background: linear-gradient(135deg, #f5d0fe 0%, #fecdd3 45%, #ddd6fe 100%);
+    color: #1f2937;
     padding: 50px 20px;
     text-align: center;
     border-radius: 15px;
     margin-bottom: 20px;
+    border: 1px solid rgba(168, 85, 247, 0.25);
 }
 
 header h1 {
@@ -30,11 +33,13 @@ header h1 {
 
 /* NAVİGASYON */
 nav {
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
     padding: 15px;
     border-radius: 12px;
     margin-bottom: 20px;
     text-align: center;
+    border: 1px solid rgba(168, 85, 247, 0.22);
 }
 
 nav ul {
@@ -50,14 +55,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ff8c00;
+    color: #7c3aed;
     font-weight: bold;
     transition: 0.4s;
 }
 
 nav ul li a:hover {
-    color: #fff;
-    text-shadow: 0 0 5px #ff8c00;
+    color: #db2777;
+    text-shadow: none;
 }
 
 /* İÇERİK ALANI */
@@ -88,21 +93,21 @@ main, aside {
 
 main {
     width: 65%;
-    background-color: #262626;
+    background-color: rgba(255, 255, 255, 0.78);
     margin-right: 2%;
-    border: 1px solid #444;
+    border: 1px solid rgba(168, 85, 247, 0.22);
 }
 
 aside {
     width: 32%;
-    background-color: #333; /* Yan menü */
-    border: 1px solid #ff8c00;
+    background-color: rgba(255, 255, 255, 0.65); /* Yan menü */
+    border: 1px solid rgba(236, 72, 153, 0.25);
 }
 
 /* HİYERARŞİK SEÇİCİLER */
 main h2 {
-    color: #ff8c00;
-    border-bottom: 2px solid #ff8c00;
+    color: #7c3aed;
+    border-bottom: 2px solid rgba(124, 58, 237, 0.35);
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -110,12 +115,12 @@ main h2 {
 main p {
     line-height: 1.8;
     text-align: left;
-    color: #ccc;
+    color: #374151;
 }
 
 aside p {
     font-size: 14px;
-    color: #fff;
+    color: #374151;
 }
 
 
@@ -125,25 +130,25 @@ aside p {
     max-width: 600px;
     margin: 40px auto;
     padding: 40px;
-    background-color: #262626;
-    border: 1px solid #ff8c00;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(168, 85, 247, 0.22);
     border-radius: 15px;
     box-sizing: border-box;
 }
 
 .contact-container h2 {
-    color: #ff8c00;
+    color: #7c3aed;
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.6em;
-    border-bottom: 2px solid #ff8c00;
+    border-bottom: 2px solid rgba(124, 58, 237, 0.35);
     padding-bottom: 10px;
 }
 
 .contact-container label {
     display: block;
     font-weight: bold;
-    color: #e0e0e0;
+    color: #374151;
     margin-bottom: 6px;
 }
 
@@ -156,10 +161,10 @@ textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    background-color: #1a1a1a;
-    border: 1px solid #555;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(124, 58, 237, 0.22);
     border-radius: 8px;
-    color: #e0e0e0;
+    color: #111827;
     font-size: 14px;
     box-sizing: border-box;
 }
@@ -170,13 +175,14 @@ input[type="password"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #ff8c00;
+    border-color: rgba(236, 72, 153, 0.6);
+    box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.12);
 }
 
 .radio-group,
 .checkbox-group {
-    background-color: #1a1a1a;
-    border: 1px solid #555;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(124, 58, 237, 0.18);
     border-radius: 8px;
     padding: 14px 18px;
     margin-bottom: 20px;
@@ -185,7 +191,7 @@ textarea:focus {
 .radio-group label,
 .checkbox-group label {
     font-weight: normal;
-    color: #ccc;
+    color: #374151;
     display: block;
     margin-bottom: 8px;
     cursor: pointer;
@@ -205,7 +211,7 @@ textarea:focus {
 .btn-gonder {
     flex: 1;
     padding: 14px 20px;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
     color: #fff;
     font-weight: bold;
     font-size: 16px;
@@ -216,13 +222,13 @@ textarea:focus {
 }
 
 .btn-gonder:hover {
-    background-color: #0056b3;
+    filter: brightness(0.98);
 }
 
 .btn-temizle {
     flex: 1;
     padding: 14px 20px;
-    background-color: #dc3545;
+    background: linear-gradient(135deg, #fb7185 0%, #f472b6 100%);
     color: #fff;
     font-weight: bold;
     font-size: 16px;
@@ -233,16 +239,17 @@ textarea:focus {
 }
 
 .btn-temizle:hover {
-    background-color: #a71d2a;
+    filter: brightness(0.98);
 }
 footer {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background-color: #ff8c00;
-    color: #000;
+    background: linear-gradient(135deg, rgba(245, 208, 254, 0.75) 0%, rgba(254, 205, 211, 0.75) 45%, rgba(221, 214, 254, 0.75) 100%);
+    color: #1f2937;
     font-weight: bold;
     border-radius: 12px;
+    border: 1px solid rgba(168, 85, 247, 0.18);
 }
 
 /* ===== Flexbox Lab Sayfasi ===== */
@@ -250,8 +257,10 @@ body.flex-lab {
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", sans-serif;
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    background: radial-gradient(1200px 600px at 10% 0%, #ffe4f2 0%, rgba(255, 228, 242, 0) 55%),
+        radial-gradient(1200px 600px at 90% 10%, #e9d5ff 0%, rgba(233, 213, 255, 0) 55%),
+        #fbf7ff;
+    color: #1f2937;
     overflow-x: hidden;
 }
 
@@ -268,8 +277,10 @@ body.flex-lab .navbar {
     justify-content: space-between;
     align-items: center;
     padding: 0 2vw;
-    background-color: #333333;
-    color: #ff8c00;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    color: #7c3aed;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.18);
 }
 
 body.flex-lab .logo {
@@ -286,13 +297,13 @@ body.flex-lab .nav-links {
 }
 
 body.flex-lab .nav-links a {
-    color: #ff8c00;
+    color: #7c3aed;
     text-decoration: none;
     font-weight: 500;
 }
 
 body.flex-lab .nav-links a:hover {
-    color: #ffffff;
+    color: #db2777;
 }
 
 body.flex-lab .hero {
@@ -303,7 +314,7 @@ body.flex-lab .hero {
     align-items: stretch;
     gap: 16px;
     padding: 1.6vh 2vw;
-    background-color: #262626;
+    background-color: rgba(255, 255, 255, 0.7);
     box-sizing: border-box;
 }
 
@@ -317,7 +328,7 @@ body.flex-lab .hero-text {
 body.flex-lab .hero-text h1 {
     margin: 0 0 8px;
     font-size: 1.5rem;
-    color: #ff8c00;
+    color: #7c3aed;
 }
 
 body.flex-lab .hero-text p {
@@ -328,7 +339,7 @@ body.flex-lab .hero-text p {
 body.flex-lab .hero-text button {
     width: fit-content;
     border: none;
-    background-color: #ff8c00;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
     color: #ffffff;
     padding: 10px 14px;
     border-radius: 8px;
@@ -340,10 +351,10 @@ body.flex-lab .hero-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px dashed #ff8c00;
+    border: 2px dashed rgba(236, 72, 153, 0.55);
     border-radius: 8px;
-    background-color: #1a1a1a;
-    color: #ff8c00;
+    background-color: rgba(255, 255, 255, 0.65);
+    color: #7c3aed;
     font-weight: 600;
     overflow: hidden;
 }
@@ -363,7 +374,7 @@ body.flex-lab .cards {
     padding: 1.2vh 2vw;
     align-content: flex-start;
     box-sizing: border-box;
-    background-color: #1f1f1f;
+    background-color: rgba(255, 255, 255, 0.65);
 }
 
 body.flex-lab .card {
@@ -373,9 +384,9 @@ body.flex-lab .card {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    background-color: #2a2a2a;
-    border: 1px solid #ff8c00;
-    color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(168, 85, 247, 0.22);
+    color: #1f2937;
     font-weight: 600;
     text-align: center;
     line-height: 1.4;
@@ -388,7 +399,7 @@ body.flex-lab .grow-recap {
     gap: 12px;
     padding: 1.2vh 2vw;
     box-sizing: border-box;
-    background-color: #262626;
+    background-color: rgba(255, 255, 255, 0.72);
 }
 
 body.flex-lab .grow-box {
@@ -396,7 +407,7 @@ body.flex-lab .grow-box {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    background-color: #ff8c00;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
     color: #ffffff;
     font-weight: 700;
 }
@@ -418,10 +429,252 @@ body.flex-lab .page-footer {
     margin: 0;
     padding: 0;
     border-radius: 0;
-    background-color: #ff8c00;
-    color: #000000;
+    background: linear-gradient(135deg, rgba(245, 208, 254, 0.75) 0%, rgba(254, 205, 211, 0.75) 45%, rgba(221, 214, 254, 0.75) 100%);
+    color: #1f2937;
 }
 
 body.flex-lab .page-footer p {
     margin: 0;
+}
+
+/* ===== Index hero CTA ===== */
+.hero-cta {
+    margin-top: 12px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    box-shadow: 0 10px 24px rgba(168, 85, 247, 0.2);
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-1px);
+    filter: brightness(0.99);
+}
+
+/* ===== Ortak site şablonu (tüm sayfalar) ===== */
+body.site {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Eski layout kuralları (main/aside) yeni şablonu ezmesin */
+body.site main,
+body.site aside {
+    display: block;
+    width: auto;
+    min-height: 0;
+    /* Not: padding/background/border gibi görsel şeyleri burada sıfırlamıyoruz.
+       Çünkü .site-card gibi sınıflar bu değerleri kendisi veriyor. */
+}
+
+.site-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 22px;
+    margin: 16px auto 0;
+    width: min(1200px, calc(100% - 32px));
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(168, 85, 247, 0.20);
+}
+
+.site-logo {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+}
+
+.site-links {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.site-links a {
+    text-decoration: none;
+    color: #6d28d9;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-links a:hover,
+.site-links a[aria-current="page"] {
+    background-color: rgba(236, 72, 153, 0.10);
+    color: #db2777;
+}
+
+.site-hero {
+    width: min(1200px, calc(100% - 32px));
+    margin: 18px auto 0;
+    padding: 28px 22px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(245, 208, 254, 0.55) 0%, rgba(254, 205, 211, 0.55) 45%, rgba(221, 214, 254, 0.55) 100%);
+    border: 1px solid rgba(168, 85, 247, 0.18);
+}
+
+.site-hero h1 {
+    margin: 0 0 10px;
+    color: #4c1d95;
+    letter-spacing: 0.2px;
+}
+
+.site-hero p {
+    margin: 0;
+    color: #374151;
+    line-height: 1.5;
+}
+
+.site-main {
+    width: min(1200px, calc(100% - 32px));
+    margin: 18px auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-bottom: 22px;
+    justify-content: stretch;
+    align-content: start;
+}
+
+.site-card {
+    background-color: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(168, 85, 247, 0.18);
+    border-radius: 18px;
+    padding: 18px 18px;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.site-card h2 {
+    margin: 0 0 10px;
+    color: #6d28d9;
+}
+
+.site-card h3 {
+    margin: 18px 0 8px;
+    color: #7c3aed;
+}
+
+.site-card p {
+    color: #374151;
+}
+
+.site-card ul,
+.site-card ol {
+    margin: 10px 0 0;
+    padding-left: 18px;
+}
+
+.site-card li {
+    margin: 6px 0;
+}
+
+.site-card dl {
+    margin: 10px 0 0;
+}
+
+.site-card dt {
+    font-weight: 800;
+    color: #4c1d95;
+    margin-top: 10px;
+}
+
+.site-card dd {
+    margin: 4px 0 0 0;
+    color: #374151;
+}
+
+/* Ana sayfa sağ kart: daha büyük tipografi */
+.site-card--sidebar {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.site-card--sidebar h2 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.site-card--sidebar h3 {
+    font-size: 1.15rem;
+}
+
+.site-card--sidebar a {
+    font-size: 1.05rem;
+}
+
+.site-footer {
+    margin-top: auto;
+    width: min(1200px, calc(100% - 32px));
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(245, 208, 254, 0.60) 0%, rgba(254, 205, 211, 0.60) 45%, rgba(221, 214, 254, 0.60) 100%);
+    border: 1px solid rgba(168, 85, 247, 0.16);
+    color: #374151;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+    .site-main.two-col {
+        /* Sağ kolon dar kalmasın: min genişlik ver */
+        grid-template-columns: minmax(0, 2.2fr) minmax(360px, 1fr);
+        align-items: start;
+    }
+}
+
+@media (min-width: 1200px) {
+    .site-main.two-col {
+        grid-template-columns: minmax(0, 2fr) minmax(420px, 1fr);
+    }
+}
+
+/* Ana sayfa: sağ sidebar daha geniş olsun (kırılmayı azaltır) */
+@media (min-width: 900px) {
+    .site-main.two-col.two-col--wide-sidebar {
+        /* fr track’lar tüm alanı doldursun */
+        grid-template-columns: 2fr 1.2fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .site-main.two-col.two-col--wide-sidebar {
+        grid-template-columns: 2fr 1.25fr;
+    }
 }
