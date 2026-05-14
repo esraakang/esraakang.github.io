@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hafta 3 – İletişim Formu | Esra Kanğ</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #1a1a2e;
+      padding: 0 2rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+    }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { display: inline-block; }
+    nav ul li a {
+      display: inline-block;
+      padding: 0 1.2rem;
+      line-height: 56px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s, background 0.2s;
+    }
+    nav ul li a:hover { color: #fff; background: #16213e; }
+
+    header {
+      background: #16213e;
+      color: #fff;
+      padding: 2.5rem 3rem;
+    }
+    header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header p { color: #aab4c8; line-height: 1.6; }
+
+    .wrapper {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #3a7bd5;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* BOX MODEL: contact-container */
+    .contact-container {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2.5rem 2.5rem;
+      background: #fff;
+      border: 1px solid #ccd0d9;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .contact-container h2 {
+      font-size: 1.4rem;
+      color: #1a1a2e;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-container .subtitle {
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+      margin-bottom: 1.8rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #1a1a2e;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Çoklu seçici: input, select, textarea */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      font-size: 0.95rem;
+      border: 1px solid #ccd0d9;
+      border-radius: 6px;
+      margin-bottom: 1.1rem;
+      font-family: inherit;
+      color: #333;
+      transition: border-color 0.2s;
+      background: #fafbfc;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #3a7bd5;
+      background: #fff;
+    }
+
+    textarea { resize: vertical; min-height: 110px; }
+
+    /* Checkbox grubu */
+    .checkbox-group {
+      background: #f8f9fc;
+      border: 1px solid #e0e4ed;
+      border-radius: 6px;
+      padding: 0.8rem 1rem;
+      margin-bottom: 1.1rem;
+    }
+    .checkbox-group label {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+      cursor: pointer;
+      color: #444;
+    }
+    .checkbox-group label:last-child { margin-bottom: 0; }
+
+    /* Radio grubu */
+    .radio-group {
+      background: #f8f9fc;
+      border: 1px solid #e0e4ed;
+      border-radius: 6px;
+      padding: 0.8rem 1rem;
+      margin-bottom: 1.1rem;
+    }
+    .radio-group label {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+      cursor: pointer;
+      color: #444;
+    }
+    .radio-group label:last-child { margin-bottom: 0; }
+
+    .btn-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Gönder butonu */
+    button[type="submit"] {
+      flex: 1;
+      padding: 0.75rem 1.5rem;
+      background: #3a7bd5;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button[type="submit"]:hover { background: #2c62b0; }
+
+    button[type="reset"] {
+      flex: 1;
+      padding: 0.75rem 1.5rem;
+      background: #e74c3c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button[type="reset"]:hover { background: #c0392b; }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #1a1a2e;
+      color: #888;
+      font-size: 0.85rem;
+      margin-top: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="about.html">Hakkımda</a></li>
+      <li><a href="interests.html">İlgi Alanlarım</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Hafta 3 – İletişim Formu</h1>
+    <p>HTML form yapıları ve CSS Box Model uygulaması.</p>
+  </header>
+
+  <div class="wrapper">
+    <a class="back-link" href="index.html">← Ana Sayfaya Dön</a>
+
+    <div class="contact-container">
+      <h2>Detaylı İletişim Formu</h2>
+      <p class="subtitle">Aşağıdaki formu doldurunuz.</p>
+
+      <form>
+        <label for="adsoyad">Ad Soyad:</label>
+        <input type="text" id="adsoyad" name="adsoyad" placeholder="Örn: Esra Kanğ">
+
+        <label for="eposta">E-posta Adresi:</label>
+        <input type="email" id="eposta" name="eposta" placeholder="ornek@mail.com">
+
+        <label for="sifre">Başvuru Takip Şifresi:</label>
+        <input type="password" id="sifre" name="sifre" placeholder="Şifrenizi girin">
+
+        <label>İletişim Tercihi:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="iletisim" value="eposta" checked> Bana e-posta ile ulaşın</label>
+          <label><input type="radio" name="iletisim" value="telefon"> Bana telefonla ulaşın</label>
+        </div>
+
+        <label>İlgi Alanları / Yetenekler:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="yetenek" value="html"> HTML</label>
+          <label><input type="checkbox" name="yetenek" value="css"> CSS</label>
+          <label><input type="checkbox" name="yetenek" value="algoritma"> Algoritma</label>
+        </div>
+
+        <label for="konu">Konu:</label>
+        <select id="konu" name="konu">
+          <option value="">Lütfen bir konu seçin...</option>
+          <option value="is">İş Teklifi</option>
+          <option value="soru">Soru</option>
+          <option value="geri">Geri Bildirim</option>
+        </select>
+
+        <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+        <input type="file" id="dosya" name="dosya">
+
+        <label for="mesaj">Mesajınız:</label>
+        <textarea id="mesaj" name="mesaj" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+
+        <div class="btn-row">
+          <button type="submit">Gönder</button>
+          <button type="reset">Temizle</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Esra Kanğ | Web Programlama Dersi – Hafta 3</p>
+  </footer>
+
+</body>
+</html>

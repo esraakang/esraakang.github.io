@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Esra Kanğ - Web Programlama Lab'ları</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="site">
+    <div class="site-shell">
+        <nav class="site-nav" aria-label="Ana menü">
+            <a class="site-logo" href="index.html">Esra Kanğ</a>
+            <ul class="site-links">
+                <li><a href="index.html" aria-current="page">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="interests.html">İlgi Alanlarım</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="hafta7.html">Hafta 7</a></li>
+            </ul>
+        </nav>
+
+        <header class="site-hero">
+            <h1>Web Programlama Laboratuvar Ana Sayfası</h1>
+            <p>Bu sayfa GitHub Pages üzerinde yayınlanan laboratuvar uygulamalarına giriş için hazırlanmıştır. Aşağıdaki butondan hafta 7 uygulamasına geçebilirsiniz.</p>
+            <p class="hero-cta">
+                <a class="cta-button" href="hafta7.html">Hafta 7 Uygulamasına Git</a>
+                &#160;
+                <a class="cta-button" href="#lab-listesi" style="background:linear-gradient(135deg,#6d28d9 0%,#7c3aed 100%);">Diğer Haftalar</a>
+            </p>
+        </header>
+
+        <main class="site-main two-col two-col--wide-sidebar">
+
+            <section class="site-card" id="lab-listesi">
+                <h2>Lab Çalışmaları</h2>
+                <p style="color:#6b7280;font-size:0.88rem;margin-bottom:12px;">Tüm haftalara buradan erişebilirsiniz.</p>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;">
+
+                    <a href="index.html" style="display:flex;flex-direction:column;background:rgba(255,255,255,0.9);border:1px solid rgba(168,85,247,0.22);border-radius:14px;padding:1rem;text-decoration:none;color:#1f2937;transition:transform .18s,box-shadow .18s,border-color .18s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(168,85,247,.18)';this.style.borderColor='rgba(168,85,247,.45)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='rgba(168,85,247,.22)'">
+                        <span style="display:inline-block;font-size:.7rem;font-weight:700;color:#7c3aed;background:rgba(168,85,247,.1);border-radius:6px;padding:2px 8px;margin-bottom:6px;align-self:flex-start;">Hafta 1</span>
+                        <strong style="font-size:.9rem;color:#4c1d95;margin:0 0 4px;display:block;">GitHub Pages</strong>
+                        <span style="font-size:.78rem;color:#6b7280;line-height:1.4;flex:1;">GitHub Pages kurulumu ve kişisel portfolyo</span>
+                        <span style="margin-top:8px;font-size:.8rem;color:#a855f7;font-weight:600;">→ Bu sayfa</span>
+                    </a>
+
+                    <a href="lab2.html" style="display:flex;flex-direction:column;background:rgba(255,255,255,0.9);border:1px solid rgba(168,85,247,0.22);border-radius:14px;padding:1rem;text-decoration:none;color:#1f2937;transition:transform .18s,box-shadow .18s,border-color .18s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(168,85,247,.18)';this.style.borderColor='rgba(168,85,247,.45)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='rgba(168,85,247,.22)'">
+                        <span style="display:inline-block;font-size:.7rem;font-weight:700;color:#7c3aed;background:rgba(168,85,247,.1);border-radius:6px;padding:2px 8px;margin-bottom:6px;align-self:flex-start;">Hafta 2</span>
+                        <strong style="font-size:.9rem;color:#4c1d95;margin:0 0 4px;display:block;">HTML + CSS</strong>
+                        <span style="font-size:.78rem;color:#6b7280;line-height:1.4;flex:1;">Yatay menü, iki sütunlu düzen, CSS seçiciler</span>
+                        <span style="margin-top:8px;font-size:.8rem;color:#a855f7;font-weight:600;">→ Görüntüle</span>
+                    </a>
+
+                    <a href="lab3.html" style="display:flex;flex-direction:column;background:rgba(255,255,255,0.9);border:1px solid rgba(168,85,247,0.22);border-radius:14px;padding:1rem;text-decoration:none;color:#1f2937;transition:transform .18s,box-shadow .18s,border-color .18s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(168,85,247,.18)';this.style.borderColor='rgba(168,85,247,.45)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='rgba(168,85,247,.22)'">
+                        <span style="display:inline-block;font-size:.7rem;font-weight:700;color:#7c3aed;background:rgba(168,85,247,.1);border-radius:6px;padding:2px 8px;margin-bottom:6px;align-self:flex-start;">Hafta 3</span>
+                        <strong style="font-size:.9rem;color:#4c1d95;margin:0 0 4px;display:block;">Form Yapıları</strong>
+                        <span style="font-size:.78rem;color:#6b7280;line-height:1.4;flex:1;">İletişim formu ve CSS Box Model uygulaması</span>
+                        <span style="margin-top:8px;font-size:.8rem;color:#a855f7;font-weight:600;">→ Görüntüle</span>
+                    </a>
+
+                    <a href="lab4.html" style="display:flex;flex-direction:column;background:rgba(255,255,255,0.9);border:1px solid rgba(168,85,247,0.22);border-radius:14px;padding:1rem;text-decoration:none;color:#1f2937;transition:transform .18s,box-shadow .18s,border-color .18s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(168,85,247,.18)';this.style.borderColor='rgba(168,85,247,.45)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='rgba(168,85,247,.22)'">
+                        <span style="display:inline-block;font-size:.7rem;font-weight:700;color:#7c3aed;background:rgba(168,85,247,.1);border-radius:6px;padding:2px 8px;margin-bottom:6px;align-self:flex-start;">Hafta 4</span>
+                        <strong style="font-size:.9rem;color:#4c1d95;margin:0 0 4px;display:block;">Flexbox</strong>
+                        <span style="font-size:.78rem;color:#6b7280;line-height:1.4;flex:1;">flex-grow, flex-wrap, vh/vw boyutlandırma</span>
+                        <span style="margin-top:8px;font-size:.8rem;color:#a855f7;font-weight:600;">→ Görüntüle</span>
+                    </a>
+
+                    <a href="lab5.html" style="display:flex;flex-direction:column;background:rgba(255,255,255,0.9);border:1px solid rgba(168,85,247,0.22);border-radius:14px;padding:1rem;text-decoration:none;color:#1f2937;transition:transform .18s,box-shadow .18s,border-color .18s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(168,85,247,.18)';this.style.borderColor='rgba(168,85,247,.45)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='rgba(168,85,247,.22)'">
+                        <span style="display:inline-block;font-size:.7rem;font-weight:700;color:#7c3aed;background:rgba(168,85,247,.1);border-radius:6px;padding:2px 8px;margin-bottom:6px;align-self:flex-start;">Hafta 5</span>
+                        <strong style="font-size:.9rem;color:#4c1d95;margin:0 0 4px;display:block;">CSS Position</strong>
+                        <span style="font-size:.78rem;color:#6b7280;line-height:1.4;flex:1;">relative, absolute, fixed ve z-index kullanımı</span>
+                        <span style="margin-top:8px;font-size:.8rem;color:#a855f7;font-weight:600;">→ Görüntüle</span>
+                    </a>
+
+                    <a href="lab6.html" style="display:flex;flex-direction:column;background:rgba(255,255,255,0.9);border:1px solid rgba(168,85,247,0.22);border-radius:14px;padding:1rem;text-decoration:none;color:#1f2937;transition:transform .18s,box-shadow .18s,border-color .18s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(168,85,247,.18)';this.style.borderColor='rgba(168,85,247,.45)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='rgba(168,85,247,.22)'">
+                        <span style="display:inline-block;font-size:.7rem;font-weight:700;color:#7c3aed;background:rgba(168,85,247,.1);border-radius:6px;padding:2px 8px;margin-bottom:6px;align-self:flex-start;">Hafta 6</span>
+                        <strong style="font-size:.9rem;color:#4c1d95;margin:0 0 4px;display:block;">JavaScript</strong>
+                        <span style="font-size:.78rem;color:#6b7280;line-height:1.4;flex:1;">Not hesaplama ve birim dönüştürücü uygulamaları</span>
+                        <span style="margin-top:8px;font-size:.8rem;color:#a855f7;font-weight:600;">→ Görüntüle</span>
+                    </a>
+
+                    <a href="hafta7.html" style="display:flex;flex-direction:column;background:rgba(255,255,255,0.9);border:1px solid rgba(168,85,247,0.22);border-radius:14px;padding:1rem;text-decoration:none;color:#1f2937;transition:transform .18s,box-shadow .18s,border-color .18s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(168,85,247,.18)';this.style.borderColor='rgba(168,85,247,.45)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='rgba(168,85,247,.22)'">
+                        <span style="display:inline-block;font-size:.7rem;font-weight:700;color:#7c3aed;background:rgba(168,85,247,.1);border-radius:6px;padding:2px 8px;margin-bottom:6px;align-self:flex-start;">Hafta 7</span>
+                        <strong style="font-size:.9rem;color:#4c1d95;margin:0 0 4px;display:block;">Bootstrap + JS</strong>
+                        <span style="font-size:.78rem;color:#6b7280;line-height:1.4;flex:1;">Bootstrap CDN ile etkinlik kayıt sayfası</span>
+                        <span style="margin-top:8px;font-size:.8rem;color:#a855f7;font-weight:600;">→ Görüntüle</span>
+                    </a>
+
+                </div>
+            </section>
+
+            <aside class="site-card site-card--sidebar">
+                <h2>Hakkımda</h2>
+                <p>Marmara Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Hedefim modern, responsive ve kullanıcı deneyimi odaklı web uygulamaları geliştirmek.</p>
+                <h3>Odak Konular</h3>
+                <ul>
+                    <li>HTML &amp; CSS temelleri</li>
+                    <li>JavaScript &amp; DOM</li>
+                    <li>Flexbox &amp; CSS Position</li>
+                    <li>Bootstrap framework</li>
+                    <li>GitHub Pages yayınlama</li>
+                </ul>
+                <h3>Hızlı Bağlantılar</h3>
+                <ul>
+                    <li><a href="about.html">Hakkımda</a></li>
+                    <li><a href="interests.html">İlgi Alanlarım</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                </ul>
+            </aside>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 Esra Kanğ | Web Programlama Dersi</p>
+        </footer>
+    </div>
+</body>
+</html>

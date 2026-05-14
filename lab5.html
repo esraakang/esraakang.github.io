@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hafta 5 – CSS Position | Esra Kanğ</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #eef0f4;
+      color: #333;
+      min-height: 140vh; /* scroll için uzun sayfa */
+    }
+
+    /* === FIXED: Sabit "Ana Sayfaya Dön" butonu === */
+    .fixed-btn {
+      position: fixed;
+      top: 1.2rem;
+      left: 1.2rem;
+      z-index: 1000;
+      background: #3a7bd5;
+      color: #fff;
+      padding: 0.55rem 1.1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      transition: background 0.2s, transform 0.15s;
+      cursor: pointer;
+    }
+    .fixed-btn:hover { background: #2c62b0; transform: scale(1.04); }
+    .fixed-btn:active { transform: scale(0.97); }
+
+    /* === BAŞLIK === */
+    .page-header {
+      text-align: center;
+      padding: 3.5rem 2rem 2rem;
+      background: #16213e;
+      color: #fff;
+    }
+    .page-header h1 { font-size: 1.7rem; margin-bottom: 0.5rem; }
+    .page-header p  { color: #aab4c8; font-size: 0.95rem; }
+
+    /* === ANA KAPSAYICI === */
+    .page-body {
+      max-width: 780px;
+      margin: 3rem auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    /* === position: relative kapsayıcı === */
+    .card-container {
+      position: relative;       /* relative kapsayıcı */
+      background: linear-gradient(135deg, #e8edf8 0%, #dde4f5 100%);
+      border-radius: 16px;
+      padding: 3rem 2.5rem 2.5rem;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+      min-height: 360px;
+      overflow: hidden;
+    }
+
+    /* Arka plan dekoratif daire (z-index ile katman) */
+    .card-container::before {
+      content: '';
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      background: rgba(100,130,220,0.12);
+      border-radius: 50%;
+      bottom: -40px;
+      right: -40px;
+      z-index: 0;
+    }
+
+    /* Kart içeriği z-index ile üstte */
+    .card-main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-main h2 {
+      font-size: 1.6rem;
+      color: #1a1a2e;
+      margin-bottom: 0.8rem;
+    }
+
+    .card-main p {
+      font-size: 0.95rem;
+      color: #445;
+      line-height: 1.7;
+      max-width: 420px;
+    }
+
+    /* === position: absolute etiketler (3 adet) === */
+
+    /* Etiket 1 — sol üst: "Ücretsiz" */
+    .badge-free {
+      position: absolute;
+      top: 1.2rem;
+      left: 1.5rem;
+      z-index: 2;
+      background: #f9e4b7;
+      color: #7a5200;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .badge-free:hover { transform: scale(1.08); box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+
+    /* Etiket 2 — sağ üst: tarih */
+    .badge-date {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      z-index: 2;
+      background: #c8e6f9;
+      color: #0b4f7a;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .badge-date:hover { transform: scale(1.08); box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+
+    /* Etiket 3 — orta sağ: konum */
+    .badge-location {
+      position: absolute;
+      top: 50%;
+      right: 1.8rem;
+      transform: translateY(-50%);
+      z-index: 2;
+      background: #fff;
+      color: #333;
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .badge-location:hover {
+      transform: translateY(-50%) scale(1.05);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+
+    /* Etiket 4 — sağ alt: "Son Kayıt" */
+    .badge-deadline {
+      position: absolute;
+      bottom: 1.2rem;
+      right: 1.5rem;
+      z-index: 2;
+      background: #fddede;
+      color: #7a0000;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .badge-deadline:hover { transform: scale(1.08); box-shadow: 0 3px 10px rgba(0,0,0,0.15); }
+
+    /* @keyframes animasyon */
+    @keyframes pulse-glow {
+      0%   { box-shadow: 0 0 0 0 rgba(58,123,213,0.4); }
+      70%  { box-shadow: 0 0 0 10px rgba(58,123,213,0); }
+      100% { box-shadow: 0 0 0 0 rgba(58,123,213,0); }
+    }
+
+    .badge-free { animation: pulse-glow 2.2s infinite; }
+
+    /* Footer alanı */
+    .page-footer {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.82rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FIXED öğe -->
+  <a class="fixed-btn" href="index.html">← Ana Sayfaya Dön</a>
+
+  <!-- BAŞLIK -->
+  <div class="page-header">
+    <h1>Hafta 5 – CSS Position ile Duyuru Kartı</h1>
+    <p>position: relative, absolute, fixed · z-index · hover · @keyframes animasyon</p>
+  </div>
+
+  <div class="page-body">
+
+    <!-- RELATIVE kapsayıcı -->
+    <div class="card-container">
+
+      <!-- ABSOLUTE etiketler -->
+      <span class="badge-free">Ücretsiz</span>
+      <span class="badge-date">16 Mayıs</span>
+      <span class="badge-location">Konum: Konferans Salonu</span>
+      <span class="badge-deadline">Son Kayıt</span>
+
+      <!-- Kart içeriği (z-index: 1) -->
+      <div class="card-main">
+        <h2>Teknoloji Topluluğu Etkinliği</h2>
+        <p>
+          Bu örnek sayfada amaç; CSS position özelliklerini kullanarak tek bir
+          duyuru kartı üzerinde <strong>relative</strong>, <strong>absolute</strong>,
+          <strong>fixed</strong>, z-index, hover, cursor ve animasyon mantığını
+          birlikte göstermektir.
+        </p>
+      </div>
+    </div>
+
+    <p class="page-footer">2026 – Hafta 5 CSS Position Örnek Çalışması</p>
+  </div>
+
+</body>
+</html>

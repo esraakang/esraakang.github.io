@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hafta 2 – HTML/CSS Temel Ödevi | Esra Kanğ</title>
+  <style>
+    /* Genel Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    /* --- NAVBAR --- */
+    nav {
+      background: #1a1a2e;
+      padding: 0 2rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      padding: 0 1.2rem;
+      line-height: 56px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+      background: #16213e;
+    }
+
+    /* --- HEADER --- */
+    header {
+      background: #16213e;
+      color: #fff;
+      padding: 2.5rem 3rem;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #aab4c8;
+      line-height: 1.6;
+    }
+
+    /* --- İKİ SÜTUNLU LAYOUT --- */
+    .wrapper {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .two-col {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    /* Hiyerarşik seçici 1 */
+    .two-col .content {
+      flex: 2;
+      background: #fff;
+      padding: 2rem;
+      border: 1px solid #dde1e7;
+      border-radius: 8px;
+    }
+
+    /* Hiyerarşik seçici 2 */
+    .two-col .sidebar {
+      flex: 1;
+      background: #fff;
+      padding: 2rem;
+      border: 1px solid #dde1e7;
+      border-radius: 8px;
+    }
+
+    /* Grup seçici */
+    h1, h2, p {
+      line-height: 1.6;
+    }
+
+    .content h2, .sidebar h2 {
+      font-size: 1.1rem;
+      color: #1a1a2e;
+      border-bottom: 2px solid #e8eaf0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.75;
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Hiyerarşik seçici 3: nav a için zaten yukarıda var */
+    .content p strong {
+      color: #1a1a2e;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #1a1a2e;
+      color: #888;
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 1.5rem 0 0.5rem;
+      color: #3a7bd5;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR: ul > li > a, display inline-block, hover efekti -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="about.html">Hakkımda</a></li>
+      <li><a href="interests.html">İlgi Alanlarım</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Hafta 2 – HTML &amp; CSS Temel Ödevi</h1>
+    <p>CSS seçiciler, display özellikleri ve iki sütunlu sayfa düzeni uygulaması.</p>
+  </header>
+
+  <div class="wrapper">
+    <a class="back-link" href="index.html">← Ana Sayfaya Dön</a>
+
+    <!-- İKİ SÜTUN -->
+    <div class="two-col">
+
+      <!-- SOL: İÇERİK -->
+      <div class="content">
+        <h2>İçerik</h2>
+        <p>
+          Bu alanda örnek içerik metinleri bulunmaktadır. CSS özellikleriyle
+          bu metinler arasında <strong>boşluklar</strong> (line-height) ve
+          hizalamalar (text-align) düzenlenmektedir.
+        </p>
+        <p>
+          Önce CSS ile kutuları / alanları yan yana getirmeyi, ardından alt alta
+          yerleştirmeyi öğrendik. Şimdi ise CSS seçicilerini kullanarak
+          <strong>grup ve hiyerarşik seçimler</strong> yapmayı görüyoruz.
+        </p>
+        <p>
+          Hiyerarşik seçiciler (<code>.content p</code>, <code>nav ul li a</code> gibi)
+          ile belirli bir kapsayıcı içindeki elemanlara stil uygulayabiliriz.
+          Grup seçiciler (<code>h1, h2, p</code> gibi) ise birden fazla elemana
+          aynı anda stil vermemizi sağlar.
+        </p>
+      </div>
+
+      <!-- SAĞ: YAN MENÜ -->
+      <div class="sidebar">
+        <h2>Yan Menü / Bilgi</h2>
+        <p>
+          Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik (width),
+          yükseklik (height) ve kenar boşlukları (margin/padding) ayarlanmaktadır.
+        </p>
+        <p>
+          Hiyerarşik ve grup seçicilerle farklı bölümlere stil verilebilir.
+          <code>display: inline-block</code> ile yatay menü oluşturulmuştur.
+        </p>
+        <p>
+          Bu lab çalışmasında <strong>font-size</strong>, <strong>color</strong>
+          ve <strong>line-height</strong> özellikleri kullanılmaktadır.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Esra Kanğ | Web Programlama Dersi – Hafta 2</p>
+  </footer>
+
+</body>
+</html>

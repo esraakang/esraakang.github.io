@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hafta 4 – Flexbox | Esra Kanğ</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ANA KAPSAYICI: 100vh, flex column */
+    .wrapper {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background: #f0f2f5;
+      overflow: hidden;
+    }
+
+    /* 1) NAVBAR — 10vh */
+    .navbar {
+      height: 10vh;
+      width: 100vw;
+      background: #1a1a2e;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      flex-shrink: 0;
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .navbar .nav-links li a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .navbar .nav-links li a:hover {
+      background: #16213e;
+      color: #fff;
+    }
+
+    /* Etiket çubuğu */
+    .label-bar {
+      background: #eaedf2;
+      padding: 0.3rem 2rem;
+      font-size: 0.72rem;
+      color: #888;
+      display: flex;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* 2) HERO — 30vh */
+    .hero {
+      height: 30vh;
+      background: #16213e;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 1.5rem 2rem;
+      flex-shrink: 0;
+      gap: 1.5rem;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .hero-text h1 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text p {
+      font-size: 0.9rem;
+      color: #aab4c8;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text a {
+      display: inline-block;
+      background: #3a7bd5;
+      color: #fff;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      align-self: flex-start;
+    }
+
+    .hero-image {
+      flex: 1;
+      background: #0f3460;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aab4c8;
+      font-size: 0.85rem;
+      min-width: 180px;
+      max-width: 280px;
+    }
+
+    .hero-image svg {
+      width: 60px;
+      height: 60px;
+      opacity: 0.4;
+    }
+
+    /* 3) KARTLAR — 30vh */
+    .cards-section {
+      height: 30vh;
+      background: #f8f9fc;
+      padding: 0.8rem 2rem;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .cards-section h2 {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.6rem;
+    }
+
+    .cards-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      flex: 1;
+    }
+
+    .card {
+      flex: 1 1 140px;
+      background: #fff;
+      border: 1px solid #dde1e7;
+      border-radius: 7px;
+      padding: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 120px;
+    }
+
+    .card .card-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #3a7bd5;
+      background: #eaf1fb;
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.4rem;
+    }
+
+    .card h3 { font-size: 0.88rem; color: #1a1a2e; margin-bottom: 0.3rem; }
+    .card p { font-size: 0.75rem; color: #777; flex: 1; margin-bottom: 0.5rem; }
+
+    .card a {
+      display: inline-block;
+      font-size: 0.75rem;
+      background: #3a7bd5;
+      color: #fff;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    /* 4) FLEX GROW — 20vh */
+    .flex-grow-section {
+      height: 20vh;
+      background: #fff;
+      padding: 0.8rem 2rem;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      border-top: 1px solid #e0e4ed;
+    }
+
+    .flex-grow-section h2 {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.6rem;
+    }
+
+    .grow-row {
+      display: flex;
+      align-items: stretch;
+      gap: 0.6rem;
+      flex: 1;
+    }
+
+    .grow-box {
+      border-radius: 7px;
+      padding: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .grow-box h3 { font-size: 0.85rem; margin-bottom: 0.2rem; }
+    .grow-box p  { font-size: 0.72rem; color: #666; flex: 1; }
+    .grow-box a  {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #fff;
+      align-self: flex-start;
+      margin-top: 0.3rem;
+    }
+
+    .box1 { flex-grow: 1; background: #eaf1fb; color: #1a1a2e; }
+    .box1 a { background: #3a7bd5; }
+
+    .box2 { flex-grow: 2; background: #e8f8ee; color: #1a1a2e; }
+    .box2 a { background: #27ae60; }
+
+    .box3 { flex-grow: 1; background: #fef4e4; color: #1a1a2e; }
+    .box3 a { background: #e67e22; }
+
+    /* 5) FOOTER — 10vh */
+    .footer {
+      height: 10vh;
+      background: #1a1a2e;
+      color: #888;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.82rem;
+      flex-shrink: 0;
+    }
+
+    .footer a {
+      color: #6ab0f5;
+      text-decoration: none;
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- 1) NAVBAR -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">Esra Kanğ</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="about.html">Hakkımda</a></li>
+      <li><a href="interests.html">Dersler</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <div class="label-bar">
+    <span>flex layout</span>
+    <span>justify-content: space-between</span>
+    <span>align-items: center</span>
+    <span>10vh height</span>
+    <span>100vw width</span>
+  </div>
+
+  <!-- 2) HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hafta 4 – Flexbox Ödevi</h1>
+      <p>Flexbox ile yatay/dikey hizalama, flex-grow ve vh boyutlandırma.</p>
+      <a href="index.html">Ana Sayfaya Dön</a>
+    </div>
+    <div class="hero-image">
+      <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="10" width="30" height="40" rx="3" fill="#aab4c8"/>
+        <rect x="45" y="5" width="30" height="50" rx="3" fill="#6ab0f5"/>
+        <circle cx="60" cy="20" r="8" fill="#fff" opacity="0.3"/>
+        <rect x="50" y="35" width="20" height="4" rx="2" fill="#fff" opacity="0.4"/>
+        <rect x="50" y="42" width="14" height="4" rx="2" fill="#fff" opacity="0.4"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 3) KARTLAR -->
+  <section class="cards-section">
+    <h2>Kartlar Bölümü — flex-wrap, gap</h2>
+    <div class="cards-row">
+      <div class="card">
+        <span class="card-num">01</span>
+        <h3>Responsive Tasarım</h3>
+        <p>Container, row, col yapıları ile farklı ekranlarda uyumlu görünüm.</p>
+        <a href="#">Detay</a>
+      </div>
+      <div class="card">
+        <span class="card-num">02</span>
+        <h3>Form Yapıları</h3>
+        <p>form-control, form-select sınıfları ile form elemanları.</p>
+        <a href="#">Detay</a>
+      </div>
+      <div class="card">
+        <span class="card-num">03</span>
+        <h3>JS Etkileşimi</h3>
+        <p>Form gönderildiğinde özet kartı oluşturulur, tema değişir.</p>
+        <a href="#">Detay</a>
+      </div>
+      <div class="card">
+        <span class="card-num">04</span>
+        <h3>CSS Position</h3>
+        <p>relative, absolute ve fixed konumlandırma teknikleri.</p>
+        <a href="#">Detay</a>
+      </div>
+      <div class="card">
+        <span class="card-num">05</span>
+        <h3>Flexbox</h3>
+        <p>flex-grow, flex-wrap, justify-content ve align-items kullanımı.</p>
+        <a href="#">Detay</a>
+      </div>
+      <div class="card">
+        <span class="card-num">06</span>
+        <h3>Bootstrap</h3>
+        <p>CDN üzerinden Bootstrap kullanımı ve hazır bileşenler.</p>
+        <a href="#">Detay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) FLEX GROW -->
+  <section class="flex-grow-section">
+    <h2>Flex Grow Uygulama — 1 : 2 : 1</h2>
+    <div class="grow-row">
+      <div class="grow-box box1">
+        <div>
+          <h3>1. Kutu</h3>
+          <p>flex-grow: 1</p>
+        </div>
+        <a href="#">Buton</a>
+      </div>
+      <div class="grow-box box2">
+        <div>
+          <h3>2. Kutu</h3>
+          <p>flex-grow: 2</p>
+        </div>
+        <a href="#">Buton</a>
+      </div>
+      <div class="grow-box box3">
+        <div>
+          <h3>3. Kutu</h3>
+          <p>flex-grow: 1</p>
+        </div>
+        <a href="#">Buton</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5) FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Esra Kanğ — Hafta 4 Flexbox Ödevi |
+      <a href="index.html">Ana Sayfa</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

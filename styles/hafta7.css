@@ -1,0 +1,43 @@
+/* Pastel accent layer on top of Bootstrap */
+:root {
+  --brand-1: #a855f7; /* purple */
+  --brand-2: #ec4899; /* pink */
+}
+
+body {
+  background: radial-gradient(1200px 600px at 10% 0%, #ffe4f2 0%, rgba(255, 228, 242, 0) 55%),
+    radial-gradient(1200px 600px at 90% 10%, #e9d5ff 0%, rgba(233, 213, 255, 0) 55%),
+    #fbf7ff;
+}
+
+.hero {
+  background: linear-gradient(135deg, rgba(245, 208, 254, 0.55) 0%, rgba(254, 205, 211, 0.55) 45%, rgba(221, 214, 254, 0.55) 100%);
+}
+
+.btn-primary {
+  border: none;
+  background: linear-gradient(135deg, var(--brand-1) 0%, var(--brand-2) 100%);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  filter: brightness(0.98);
+}
+
+.navbar-brand {
+  background: linear-gradient(135deg, var(--brand-1) 0%, var(--brand-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Make cards slightly softer */
+.card {
+  border-color: rgba(168, 85, 247, 0.18) !important;
+}
+
+/* Result area typography */
+#resultArea .meta {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
